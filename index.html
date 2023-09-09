@@ -10,7 +10,35 @@
 </head>
 
 <body>
-  <div id="app"></div>
+  <div class="container-left">
+    <div class="title">
+      <img src="./assets/star.png" alt="Project logo. Represents odin with the project name." />
+      <h1>ODIN</h1>
+      <p>Photo by Wolfgang Hasselmann on Unsplash</p>
+    </div>
+  </div>
+  <div class="container-right">
+    <p class="content"></p>
+    <form action="" method="post">
+      <div class="form-data">
+        <label for="name">FIRST NAME</label>
+        <input type="text" name="first-name" id="name">
+        <label for="last-name">LAST NAME</label>
+        <input type="text" name="last-name" id="surname">
+        <label for="email">EMAIL</label>
+        <input type="email" name="email" id="email">
+        <label for="phone">PHONE NUMBER</label>
+        <input type="number" name="phone" id="`phone">
+        <label for="password">PASSWORD</label>
+        <input type="password" name="password" id="password" class="password">
+        <label for="verify-password">CONFIRM PASSWORD</label>
+        <input type="password" name="verify-password" id="verify-password" class="password-confirm">
+      </div>
+      <button type="submit">Create Account</button>
+    </form>
+    <p>Already have an account? <a href="/">Log In</a></p>
+    <footer>Created by <a href="https://github.com/warckor">Warckor</a></footer>
+  </div>
 </body>
 
 </html>
