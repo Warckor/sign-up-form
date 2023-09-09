@@ -10,34 +10,66 @@
 </head>
 
 <body>
-  <div class="container-left">
-    <div class="title">
-      <img src="./assets/star.png" alt="Project logo. Represents odin with the project name." />
-      <h1>ODIN</h1>
-      <p>Photo by Wolfgang Hasselmann on Unsplash</p>
-    </div>
-  </div>
-  <div class="container-right">
-    <p class="content"></p>
-    <form action="" method="post">
-      <div class="form-data">
-        <label for="name">FIRST NAME</label>
-        <input type="text" name="first-name" id="name">
-        <label for="last-name">LAST NAME</label>
-        <input type="text" name="last-name" id="surname">
-        <label for="email">EMAIL</label>
-        <input type="email" name="email" id="email">
-        <label for="phone">PHONE NUMBER</label>
-        <input type="number" name="phone" id="`phone">
-        <label for="password">PASSWORD</label>
-        <input type="password" name="password" id="password" class="password">
-        <label for="verify-password">CONFIRM PASSWORD</label>
-        <input type="password" name="verify-password" id="verify-password" class="password-confirm">
+  <div class="container">
+    <div class="container-left">
+      <div class="title">
+        <div class="title-container">
+          <img src="./assets/star.png" alt="Project logo. Represents odin with the project name." />
+          <h1>STARFIRE</h1>
+        </div>
       </div>
-      <button type="submit">Create Account</button>
-    </form>
-    <p>Already have an account? <a href="/">Log In</a></p>
-    <footer>Created by <a href="https://github.com/warckor">Warckor</a></footer>
+      <p id="credits">Photo by <a
+          href="https://unsplash.com/es/@nathananderson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nathan
+          Anderson</a> en <a
+          href="https://unsplash.com/es/fotos/p_HmZawbGIY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      </p>
+    </div>
+    <div class="container-right">
+      <div class="content">
+        <p>This is not a real online service! You know you need something like this in your life to help
+          you realize your deppest dreams. Sign up <em>now</em> to get started.</p>
+        <br>
+        <p>You <em>know</em> you want to.</p>
+        <br>
+        <br>
+        <p>Let`s do this!</p>
+      </div>
+      <div class="form">
+        <form action="" method="post">
+          <div class="form-data">
+            <div class="name">
+              <label for="name">FIRST NAME</label>
+              <input type="text" name="first-name" id="name">
+            </div>
+            <div class="surname">
+              <label for="last-name">LAST NAME</label>
+              <input type="text" name="last-name" id="surname">
+            </div>
+            <div class="email">
+              <label for="email">EMAIL</label>
+              <input type="email" name="email" id="email">
+            </div>
+            <div class="phone-number">
+              <label for="phone">PHONE NUMBER</label>
+              <input type="number" name="phone" id="`phone">
+            </div>
+            <div class="password">
+              <label for="password">PASSWORD</label>
+              <input type="password" name="password" id="password" class="password">
+            </div>
+            <div class="verify-psw">
+              <label for="verify-password">CONFIRM PASSWORD</label>
+              <input type="password" name="verify-password" id="verify-password" class="password-confirm">
+            </div>
+          </div>
+          <button type="submit">Create Account</button>
+        </form>
+      </div>
+      <p>Already have an account? <a href="/">Log In</a></p>
+      <div class="footer">
+        Created by <a href="https://github.com/warckor">Warckor</a>
+      </div>
+    </div>
   </div>
 </body>
 

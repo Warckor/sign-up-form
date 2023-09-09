@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto&display=swap');
+
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  font-size: 1rem;
+}
+
+.container-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1 0 30%;
+
+  background-image: url('./assets/stars.jpg');
+  background-size: cover;
+  background-position: center;
+
+  color: rgb(252, 252, 252);
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+  margin-bottom: 15em;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1em;
+  margin: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.title-container img {
+  width: 40px;
+  height: 40px;
+}
+
+#credits {
+  font-size: 0.7em;
+  text-align: center;
+}
+
+#credits a {
+  color: rgb(252, 252, 252);
+  text-decoration: none;
+  flex:1;
+}
+
+.container-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space between;
+  align-items: flex-start;
+  flex: 1 0 60%;
+
+  margin: 6em 5em 0 2em;
+}
+
+.content, .form, .footer {
+  flex: 1;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+}
