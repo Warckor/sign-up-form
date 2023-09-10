@@ -1,8 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto&display=swap');
 
+:root.dark {
+  --border-btn: 2px solid rgb(220, 220, 220);
+  --color-base-bg: rgb(18, 18, 18);
+  --color-base-text: rgb(240, 240, 240);
+  --color-btn-bg: rgb(36, 36, 36);
+  --github-icon-src: url('./assets/github-white.svg');
+}
+
+:root.light {
+  --border-btn: 2px solid rgb(36, 36, 36);
+  --color-base-bg: rgb(240, 240, 240);
+  --color-base-text: rgb(18, 18, 18);
+  --color-btn-bg: rgb(220, 220, 220);
+  --github-icon-src: url('./assets/github-black.svg');
+}
 
 body {
+  color: var(--color-base-text);
+  background-color: var(--color-base-bg);
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
@@ -70,14 +87,14 @@ body {
 .container-right {
   display: flex;
   flex-direction: column;
-  justify-content: space between;
+  justify-content: space-between;
   align-items: flex-start;
   flex: 1 0 60%;
 
-  margin-top: 6em;
+  margin-top: 1em;
 }
 
-.content, .footer {
+.theme, .content, .footer {
   flex: 1;
 }
 
@@ -162,17 +179,82 @@ label {
   align-items: center;
   justify-content: center;
   padding: 0.4em 2em;
-  border: 2px solid rgb(7, 7, 7);
+  border: var(--border-btn);
   border-radius: 5px;
-  background: white;
+  background: var(--color-btn-bg);
+  gap: 0.5em;
 }
 
 .github > img {
   width: 20px;
   height: 20px;
+  content: var(--github-icon-src);
 }
 
 .github > a {
   text-decoration: none;
-  color: black;
+  color: var(--color-base-text);
+}
+
+.theme {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 2em;
+}
+
+.theme p {
+  font-size: 0.8em;
+  margin: 0 0.5em;
+}
+
+.theme-label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+}
+
+#selector {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: -4em;
+  right: 6em;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
 }
