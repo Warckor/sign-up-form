@@ -158,6 +158,12 @@ label {
   border-radius: 5px;
 }
 
+.error-text {
+  color: rgb(255, 12, 12);
+  font-size: 0.5em;
+  font-weight: bold;
+}
+
 .form-button {
   margin: 1em 2em;
 }
