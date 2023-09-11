@@ -5,7 +5,7 @@ const password = document.getElementById('password');
 const errorPassword = document.getElementById('password').nextElementSibling;
 const verifyPassword = document.getElementById('verify-password');
 const errorVerifyPassword = document.getElementById('verify-password').nextElementSibling;
-const formInputs = document.querySelectorAll('.input');
+const formInputFields = document.querySelectorAll('.field');
 const submitButton = document.querySelector('.form-button>button');
 
 
@@ -26,6 +26,9 @@ function changeThemeName() {
   themeName.textContent = newName;
 }
 
+/**
+ * Checks if passwords match and validates their length.
+ */
 function checkPasswords() {
   const comparePasswords = () => {
     if (password.value !== verifyPassword.value) {
@@ -40,7 +43,7 @@ function checkPasswords() {
   }
 
   const validatePasswords = () => {
-    if (password.textContent.length < 6) {
+    if (password.value.length < 6) {
       errorPassword.textContent = '*Password must be at least 6 characters';
       password.classList.add('error');
     } else {
@@ -55,16 +58,30 @@ function checkPasswords() {
   comparePasswords();
 }
 
+function checkEmptyInputs () {
+  formInputFields.forEach((input) => {
+    if (input.value.length === 0) {
+      input.classList.add('error');
+      input.nextElementSibling.textContent = '*This field is required';
+    } else {
+      if (input.classList.contains('error')) {
+        input.classList.remove('error');
+        input.nextElementSibling.textContent = '';
+      }
+    }
+  });
+}
+
 themeSelector.addEventListener('click', () => { 
   setTheme();
   changeThemeName();
 });
 
 submitButton.addEventListener('click', (e) => {
+  checkEmptyInputs();
   checkPasswords();
 })
 
 window.onload = () => {
   root.className = 'dark';
 }
-
