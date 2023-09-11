@@ -27,7 +27,7 @@
     </div>
     <div class="container-right">
       <div class="theme">
-        <p class="theme-name">Light</p>
+        <p class="theme-name">Dark</p>
         <label for="selector" class="theme-label">
           <input type="checkbox" name="theme-selector" id="selector">
           <span class="slider"></span>
@@ -48,33 +48,37 @@
               <div class="input">
                 <label for="name">FIRST NAME</label>
                 <input class="field" type="text" name="first-name" id="name" autocomplete="off">
+                <div class="error-text"></div>
               </div>
               <div class="input">
                 <label for="surname">LAST NAME</label>
                 <input class="field" type="text" name="last-name" id="surname" autocomplete="off">
+                <div class="error-text"></div>
               </div>
               <div class="input">
                 <label for="email">EMAIL</label>
                 <input class="field" type="email" name="email" id="email" autocomplete="off">
+                <div class="error-text"></div>
               </div>
               <div class="input">
                 <label for="phone">PHONE NUMBER</label>
                 <input class="field" type="number" name="phone" id="phone" autocomplete="off">
+                <div class="error-text"></div>
               </div>
               <div class="input">
                 <label for="password">PASSWORD</label>
-                <input class="field error" type="password" name="password" id="password">
+                <input class="field" type="password" name="password" id="password">
                 <div class="error-text"></div>
               </div>
               <div class="input">
                 <label for="verify-password">CONFIRM PASSWORD</label>
-                <input class="field error" type="password" name="verify-password" id="verify-password">
+                <input class="field" type="password" name="verify-password" id="verify-password">
                 <div class="error-text"></div>
               </div>
             </div>
           </div>
           <div class="form-button">
-            <button type="submit">Create Account</button>
+            <button type="button">Create Account</button>
           </div>
         </form>
         <p class="login">Already have an account? <a href="/">Log In</a></p>
